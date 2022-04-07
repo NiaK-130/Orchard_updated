@@ -31,10 +31,10 @@ const SearchFilters = () => {
        {filters.map((filter) => (
            <Box key={filter.queryName}>
             <Select 
-            // placeholder = {filter.placeholder}
-            // w="fit-content"
-            // p="2"
-            onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
+            placeholder = {filter.placeholder}
+            w="fit-content"
+            p="2"
+            onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })}  >
             {filter?.items?.map((item) => (
               <option value={item.value} key={item.value}>
                 {item.name}

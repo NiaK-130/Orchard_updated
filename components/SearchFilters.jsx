@@ -29,12 +29,12 @@ const SearchFilters = () => {
     return (
        <Flex bg = "gray.100" p = "4" justifyContent = "center" flexWrap="wrap">
        {filters.map((filter) => (
-           <Box key={filter.queryName}>
+           <Box >
             <Select 
             placeholder = {filter.placeholder}
             w="fit-content"
             p="2"
-            onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })}  >
+            onChange={(e) => searchProperties({[filter.queryName]: e.target.value })}  >
             {filter?.items?.map((item) => (
               <option value={item.value} key={item.value}>
                 {item.name}
